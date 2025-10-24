@@ -1,0 +1,178 @@
+/* CombinedFooter.module.css */
+
+/* --- Overall Footer Container --- */
+.combinedFooter {
+    font-family: Arial, sans-serif;
+}
+
+/* --- Top Footer Section Styling (Logo, Social, Links, Apps) --- */
+.topFooter {
+    background-color: #f8faff; /* Light blue/off-white background */
+    padding: 60px 20px; /* Vertical and horizontal padding */
+    color: #333; /* Default text color */
+    border-bottom: 1px solid #e0e7ff; /* Subtle separator line */
+}
+
+.topFooterContentWrapper {
+    max-width: 1200px; /* Adjust max-width as needed */
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr; /* Default to single column on mobile */
+    gap: 40px; /* Spacing between columns */
+    justify-items: center; /* Align items to the start of their grid area */
+}
+
+/* --- Top Footer - Column 1: Logo & Social Media --- */
+.columnSection1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items on mobile */
+    text-align: center;
+}
+
+.logoWrapper {
+    margin-bottom: 20px;
+}
+
+.socialIcons {
+    display: flex;
+    gap: 10px; /* Spacing between social icons */
+    margin-top: 10px; /* Space from logo */
+}
+
+.socialLink {
+    display: flex; /* To center icon inside the circle */
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%; /* Makes it a circle */
+    background-color: #e0e7ff; /* Light blue background for circles */
+    transition: background-color 0.2s ease-in-out;
+}
+
+.socialLink:hover {
+    background-color: #cdd9ff; /* Slightly darker on hover */
+}
+
+/* --- Top Footer - Other Columns (Find Lawyers, Find Doctors, Available on) --- */
+.column {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items on mobile */
+    text-align: center;
+}
+
+.columnTitle {
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.columnLinks {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    line-height: 2; /* Spacing between list items */
+}
+
+.linkItem {
+    color: #555; /* Slightly darker than default text */
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+}
+
+.linkItem:hover {
+    color: #007bff; /* Blue on hover */
+}
+
+/* --- Top Footer - App Badges --- */
+.appBadges {
+    display: flex;
+    flex-direction: column; /* Stack vertically on mobile */
+    gap: 10px; /* Spacing between app badges */
+    margin-top: 10px;
+}
+
+.appBadgeLink {
+    display: block; /* To ensure padding works correctly */
+}
+
+
+/* --- Bottom Bar Section Styling (Copyright & Bottom Nav) --- */
+.bottomBar {
+    width: 100%;
+    background-color: #004d80; /* Deep blue color from the image */
+}
+
+.bottomBarContent {
+    max-width: 1400px; /* Matches the previous footer max-width */
+    margin: 0 auto;
+    padding: 16px 20px; /* Vertical and horizontal padding */
+    color: white;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column; /* Default stack on small screens */
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px; /* Vertical spacing between copyright and links */
+}
+
+.copyright {
+    text-align: center;
+    font-weight: 300;
+}
+
+.bottomNavLinks {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem; /* Horizontal spacing between links */
+}
+
+.bottomNavLink {
+    color: white;
+    text-decoration: none;
+    transition: color 0.15s ease-in-out;
+    white-space: nowrap; /* Prevents wrapping mid-link */
+}
+
+.bottomNavLink:hover {
+    color: #cccccc; /* Slightly lighter on hover */
+}
+
+
+/* --- Responsive Adjustments --- */
+
+/* Tablet & Desktop Layout for Top Footer */
+@media (min-width: 768px) {
+    .topFooterContentWrapper {
+        grid-template-columns: 1.5fr 1fr 1fr 1.5fr; /* Custom column widths */
+        justify-items: start; /* Align items to the start of their grid area */
+        text-align: left; /* Align text left within columns */
+    }
+
+    .columnSection1,
+    .column {
+        align-items: flex-start; /* Align items to left on larger screens */
+        text-align: left;
+    }
+
+    .socialIcons {
+        justify-content: flex-start; /* Align social icons to left */
+    }
+
+    .appBadges {
+        flex-direction: column; /* Keep vertical stacking on tablets */
+        align-items: flex-start;
+    }
+
+    /* Bottom Bar Layout */
+    .bottomBarContent {
+        flex-direction: row; /* Layout side-by-side on larger screens */
+    }
+    .copyright {
+        text-align: left;
+    }
+}

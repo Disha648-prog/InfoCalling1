@@ -1,0 +1,171 @@
+/* TestimonialCard.module.css */
+
+.cardContainer {
+    display: flex;
+    position: relative;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    overflow: hidden; /* Ensures image and bg colors fit */
+    max-width: 600px; /* Max width for individual card */
+    margin: 20px; /* Spacing between cards */
+    min-height: 280px; /* Adjust as needed */
+}
+
+/* Specific styling for Lawyer card */
+.lawyerCard .imageWrapper {
+    background-color: #e0e7ff; /* Light blue background for lawyer image */
+}
+.lawyerCard .quoteIcon {
+    background-color: #e0e7ff; /* Matching light blue for icon bubble */
+}
+.lawyerQuoteBg {
+    background-color: #eff6ff; /* Very light blue for quote background */
+}
+
+/* Specific styling for Doctor card */
+.doctorCard .imageWrapper {
+    background-color: #e6ffe6; /* Light green background for doctor image */
+}
+.doctorCard .quoteIcon {
+    background-color: #e6ffe6; /* Matching light green for icon bubble */
+}
+.doctorQuoteBg {
+    background-color: #f0fff0; /* Very light green for quote background */
+}
+
+
+.quoteIcon {
+    position: absolute;
+    top: -15px; /* Adjust to move icon partly off card */
+    left: 20px; /* Adjust position */
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+.svgIcon {
+    width: 30px;
+    height: 30px;
+    color: #88c8f0; /* Color for the SVG quote icon */
+}
+
+.cardContent {
+    display: flex;
+    width: 100%;
+}
+
+.imageWrapper {
+    flex-basis: 35%; /* Controls width of image section */
+    display: flex;
+    justify-content: center;
+    align-items: flex-end; /* Aligns image to bottom */
+    padding-bottom: 20px;
+    position: relative;
+}
+
+.profileImage {
+    width: 100%;
+    height: auto;
+    max-height: 250px; /* Prevent image from being too tall */
+    object-fit: contain; /* Ensures entire image is visible without cropping */
+    border-radius: 8px; /* Slightly rounded corners for image */
+    display: block; /* Remove extra space below image */
+}
+
+
+.quoteBackground {
+    flex-basis: 65%; /* Controls width of quote section */
+    padding: 30px;
+    padding-left: 40px; /* More padding on the left */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 0 12px 12px 0; /* Rounded only on the right side */
+    position: relative;
+    z-index: 5; /* Ensure quote background is below icon but above card base */
+}
+
+.quoteDetails {
+    /* Ensures text is aligned */
+    text-align: left;
+}
+
+.starRating {
+    color: #ffc107; /* Yellow for stars */
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+.emptyStar {
+    color: #e0e0e0; /* Gray for empty stars */
+}
+
+.authorName {
+    font-weight: bold;
+    font-size: 1.1em;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.authorTitle {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.quoteText {
+    font-size: 1em;
+    line-height: 1.6;
+    color: #444;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 768px) {
+    .cardContainer {
+        flex-direction: column; /* Stack image and quote vertically on small screens */
+        max-width: 90%;
+        margin: 20px auto;
+        min-height: auto;
+    }
+
+    .cardContent {
+        flex-direction: column;
+    }
+
+    .imageWrapper {
+        flex-basis: auto;
+        padding-bottom: 0;
+        align-items: center; /* Center image when stacked */
+        padding-top: 30px; /* Space for the quote icon */
+    }
+
+    .profileImage {
+        width: 150px; /* Fixed width for stacked image */
+        height: 150px;
+        border-radius: 50%; /* Make image round on mobile */
+        object-fit: cover;
+    }
+
+    .quoteIcon {
+        top: 10px; /* Adjust position for stacked layout */
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .quoteBackground {
+        flex-basis: auto;
+        padding: 30px 20px;
+        padding-top: 50px; /* Ensure space for the icon */
+        border-radius: 0 0 12px 12px; /* Rounded only on bottom */
+        text-align: center;
+    }
+
+    .quoteDetails {
+        text-align: center;
+    }
+}
