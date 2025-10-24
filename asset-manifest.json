@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/InfoCalling1/static/css/main.b0869fe5.css",
+    "main.js": "/InfoCalling1/static/js/main.6234737e.js",
+    "index.html": "/InfoCalling1/index.html",
+    "main.b0869fe5.css.map": "/InfoCalling1/static/css/main.b0869fe5.css.map",
+    "main.6234737e.js.map": "/InfoCalling1/static/js/main.6234737e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b0869fe5.css",
+    "static/js/main.6234737e.js"
+  ]
+}
